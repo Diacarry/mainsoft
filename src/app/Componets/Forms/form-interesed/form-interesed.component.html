@@ -1,0 +1,43 @@
+<H4>¿En que idioma?</H4>
+<div class="col-sm-10">
+  <div class="form-check">
+    <input (click)="changeIdiom('idioma1')" class="form-check-input" type="radio" name="idioma" id="idioma1" checked>
+    <label class="form-check-label" for="gridRadios1">
+      Español
+    </label>
+  </div>
+  <div class="form-check">
+    <input (click)="changeIdiom('idioma2')" class="form-check-input" type="radio" name="idioma" id="idioma2">
+    <label class="form-check-label" for="gridRadios2">
+      Ingles
+    </label>
+  </div>
+  <div class="form-check">
+    <input (click)="changeIdiom('idioma3')" class="form-check-input" type="radio" name="idioma" id="idioma3">
+    <label class="form-check-label" for="gridRadios2">
+      Frances
+    </label>
+  </div>
+  <div class="form-check">
+    <input (click)="changeIdiom('idioma4')" class="form-check-input" type="radio" name="idioma" id="idioma4">
+    <label class="form-check-label" for="gridRadios2">
+      Italiano
+    </label>
+  </div>
+  <div class="form-check">
+    <input (click)="changeIdiom('idioma5')" class="form-check-input" type="radio" name="idioma" id="idioma5">
+    <label class="form-check-label" for="gridRadios2">
+      Aleman
+    </label>
+  </div>
+</div>
+<H4>¿Cuál carta?</H4>
+<table style="width: 100%;">
+  <tbody>
+    <tr *ngFor="let tipo of interesados">
+      <td>{{ tipo.nombre }}</td>
+      <td>Ver</td>
+      <td>Generar</td>
+    </tr>
+  </tbody>
+</table>

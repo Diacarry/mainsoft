@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="row">
+  <div class="col-3">
+    <app-nav></app-nav>
+  </div>
+  <div class="col-9">
+    <h4>CARTA DE PATROCINIO</h4>
+    <p>
+      Aca podra generar sus cartas y certificados necesarios para cumplr con los tramites asociados a su proyecyo
+      Para generar el documento Seleccione el idioma, elija el tipo de documento y finalice pulsando el link generar documento.
+    </p>
+    <H4>A quien va dirigida</H4>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input (click)="pulsado()" class="form-check-input" type="radio" name="dirigido" id="dirigido1" value="option1" checked>
+        <label class="form-check-label" for="gridRadios1">
+          A quien pueda interesar
+        </label>
+      </div>
+      <div class="form-check">
+        <input (click)="pulsado()" class="form-check-input" type="radio" name="dirigido" id="dirigido2" value="option2">
+        <label class="form-check-label" for="gridRadios2">
+          A esta persona
+        </label>
+      </div>
+    </div>
+    <ng-container *ngIf="!formulario">
+      <app-form-person></app-form-person>
+    </ng-container>
+    <app-form-interesed></app-form-interesed>
+  </div>
+</div>
+<app-footer></app-footer>
